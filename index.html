@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libarary Books</title>
+
+    <!-- Added bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+    <style>
+        .loader {
+            display: none;
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 80px;
+            margin-top: 250px;
+            margin-left: 600px;
+            height: 80px;
+            animation: spin 2s linear infinite;
+            border-top: 16px solid blue;
+            border-bottom: 16px solid blue;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <section class="container">
+        <header>
+
+            <nav class="navbar navbar-dark bg-dark pb-4">
+
+
+                <!-- Navbar content -->
+            </nav>
+
+            <h2 class="text-center mt-2 mb-3">Welcome to our library</h2>
+
+        </header>
+
+        <div class="input-group  mb-3 w-50 mx-auto">
+            <input id="search-text" type="text" class="form-control" placeholder="search book name"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button onclick="bookItem()" class="btn btn-outline-secondary" type="button"
+                id="button-addon2">search</button>
+
+        </div>
+        <div class="text-center" id="found-info"></div>
+        <div class="loader" id="load"></div>
+
+        </div>
+        <!-- error message div -->
+        <div id="error-message"></div>
+        <!-- single book ingredients' div -->
+        <div id="book-info"></div>
+
+        <!-- added book card -->
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="book-item">
+
+
+        </div>
+
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="js/library.js"></script>
+</body>
+
+</html>
